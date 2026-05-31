@@ -4,6 +4,12 @@
 
 It turns the assistant into a step-by-step programming teacher: make a small change, show the change, explain the reason, then continue.
 
+## Status
+
+Current version: `0.1.0`
+
+This is the first public version of the skill. It is ready to test and iterate on, but the instructions may continue evolving based on real usage.
+
 ## Quick path
 
 1. Install `SKILL.md` under a skill folder named `teaching-programming`.
@@ -67,19 +73,17 @@ the assistant should:
 
 ```text
 learn-by-coding-skill/
+├── .gitignore
 ├── LICENSE
 ├── README.md
-├── SKILL.md
-└── .atl/
-    ├── .skill-registry.cache.json
-    └── skill-registry.md
+└── SKILL.md
 ```
 
 Notes:
 
 - `SKILL.md` is the canonical runtime instruction file.
 - `README.md` explains intent, installation, and verification.
-- `.atl/` contains local registry artifacts for this environment.
+- `.atl/` is treated as local environment state and is intentionally excluded from the published repo.
 
 ## Canonical skill name
 
@@ -94,6 +98,8 @@ teaching-programming
 The portable rule is simple: place `SKILL.md` inside a folder named `teaching-programming` wherever your agent discovers skills.
 
 ### OpenCode
+
+If your OpenCode setup discovers skills from standard project or global skill folders, this is the expected layout:
 
 Project-local:
 
@@ -111,6 +117,8 @@ cp SKILL.md ~/.config/opencode/skills/teaching-programming/SKILL.md
 
 ### Claude-style skill folders
 
+For Claude-style skill folders, this is a common layout:
+
 Project-local:
 
 ```bash
@@ -127,7 +135,7 @@ cp SKILL.md ~/.claude/skills/teaching-programming/SKILL.md
 
 ### AGENTS.md-based tools
 
-If your tool does not auto-discover `SKILL.md`, keep the skill in a project folder and reference it from `AGENTS.md`.
+If your tool does not auto-discover `SKILL.md`, keep the skill in a project folder and reference it from `AGENTS.md` or an equivalent instruction file.
 
 ```bash
 mkdir -p .agents/skills/teaching-programming
@@ -198,3 +206,4 @@ Expected outcome:
 - It does not execute code or install dependencies by itself.
 - It is safe to inspect because its behavior is defined in plain Markdown.
 - The runtime source of truth is `SKILL.md`.
+- Tool-specific discovery behavior can vary, so verify exact paths and loading rules in your chosen agent before wider rollout.

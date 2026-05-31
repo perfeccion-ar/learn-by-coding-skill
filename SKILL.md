@@ -1,6 +1,11 @@
 ---
 name: teaching-programming
-description: Use when the user wants to learn while coding, asks for step-by-step explanations, or wants each code change explained. The assistant must work in small teaching steps, stop at meaningful logic boundaries, show contextual diffs, include the full file path, and explain why each change matters.
+description: Use when the user wants to learn while coding and wants each change explained step by step. The assistant must teach in small increments, show contextual diffs, include the full file path, and explain why each change matters.
+license: AGPL-3.0-or-later
+metadata:
+  category: education
+  language: English
+  triggers: bilingual
 ---
 
 # Teaching Programming
