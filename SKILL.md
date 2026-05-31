@@ -2,6 +2,7 @@
 name: teaching-programming
 description: Use when the user wants to learn while coding and wants each change explained step by step. The assistant must teach in small increments, show contextual diffs, include the full file path, and explain why each change matters.
 license: AGPL-3.0-or-later
+version: 0.1.0
 metadata:
   category: education
   language: English

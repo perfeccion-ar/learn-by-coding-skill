@@ -10,6 +10,14 @@ Current version: `0.1.0`
 
 This is the first public version of the skill. It is ready to test and iterate on, but the instructions may continue evolving based on real usage.
 
+Release notes for published versions live in [`CHANGELOG.md`](./CHANGELOG.md).
+
+## Ownership and license
+
+Copyright (c) 2026 Sergio Alonso.
+
+Licensed under `AGPL-3.0-or-later`. See [`LICENSE`](./LICENSE).
+
 ## Quick path
 
 1. Install `SKILL.md` under a skill folder named `teaching-programming`.
@@ -73,6 +81,7 @@ the assistant should:
 
 ```text
 learn-by-coding-skill/
+├── CHANGELOG.md
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -83,6 +92,7 @@ Notes:
 
 - `SKILL.md` is the canonical runtime instruction file.
 - `README.md` explains intent, installation, and verification.
+- `CHANGELOG.md` tracks published release history.
 - `.atl/` is treated as local environment state and is intentionally excluded from the published repo.
 
 ## Canonical skill name
