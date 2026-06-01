@@ -1,4 +1,4 @@
-<img src="./assets/penguin-explorer.png" alt="Penguin explorer studying code and maps" width="100%" />
+<img src="./assets/penguin-explorer.png" alt="Penguin explorer studying code and maps" width="80%" />
 
 # Teaching Programming Skill
 
