@@ -1,3 +1,5 @@
+<img src="./assets/penguin-explorer.png" alt="Pingüino explorador estudiando código y mapas" width="100%" />
+
 # Skill Teaching Programming
 
 [Leer este README en inglés](./README.md)
