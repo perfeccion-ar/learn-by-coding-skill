@@ -10,9 +10,9 @@ Convierte al asistente en un profesor paso a paso: hacer un cambio pequeño, mos
 
 ## Estado
 
-Versión actual: `0.1.0`
+Versión actual: `1.0.1`
 
-Esta es la primera versión pública del skill. Ya está lista para probarse e iterarse, pero las instrucciones pueden seguir evolucionando según el uso real.
+Esta es la versión pública actual del skill. Está lista para usarse y seguir evolucionando según el uso real.
 
 Las notas de versiones publicadas viven en [`CHANGELOG.md`](./CHANGELOG.md).
 

@@ -10,6 +10,14 @@ All notable changes to this skill will be documented in this file.
 - Added a `skills.sh.json` repository configuration file.
 - Updated the README to document installation via `npx skills add ... --skill teaching-programming`.
 
+## [1.0.1] - 2026-06-01
+
+### Changed
+
+- Updated version references in the README files and canonical `SKILL.md` metadata to match the tagged release.
+- Simplified README copy after the initial public release.
+- Refined the hero image presentation in both README files.
+
 ## [0.1.0] - 2026-05-31
 
 ### Added

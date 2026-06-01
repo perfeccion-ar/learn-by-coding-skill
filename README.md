@@ -10,9 +10,9 @@ It turns the assistant into a step-by-step programming teacher: make a small cha
 
 ## Status
 
-Current version: `0.1.0`
+Current version: `1.0.1`
 
-This is the first public version of the skill. It is ready to test and iterate on, but the instructions may continue evolving based on real usage.
+This is the current public version of the skill. It is ready to use and continue evolving based on real usage.
 
 Release notes for published versions live in [`CHANGELOG.md`](./CHANGELOG.md).
 
