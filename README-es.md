@@ -22,9 +22,9 @@ Licenciado bajo `AGPL-3.0-or-later`. Ver [`LICENSE`](./LICENSE).
 
 ## Camino rápido
 
-1. Instalá el skill con el CLI de `skills`, o copiá manualmente el `SKILL.md` canónico si hace falta.
-2. Pedile al agente que enseñe mientras programa, por ejemplo: `Enseñame mientras agregas validación a esta función.`
-3. Verificá que el agente cambie a pasos pequeños de enseñanza en vez de volcar una solución completa de una sola vez.
+1. Instale el skill con el CLI de `skills`, o copie manualmente el `SKILL.md` canónico si hace falta.
+2. Solicite al agente que enseñe mientras programa, por ejemplo: `Enseñame mientras agregas validación a esta función.`
+3. Verifique que el agente cambie a pasos pequeños de enseñanza en vez de volcar una solución completa de una sola vez.
 
 ## Qué exige este skill
 
@@ -105,7 +105,7 @@ Notas:
 
 ## Nombre canónico del skill
 
-Usá exactamente este nombre de carpeta al instalar el skill:
+Debe usarse exactamente este nombre de carpeta al instalar el skill:
 
 ```text
 teaching-programming
@@ -127,11 +127,11 @@ Por qué importa este camino:
 
 ## Instalación manual
 
-Si no estás usando el CLI de `skills`, la regla portable es simple: colocá el `SKILL.md` canónico dentro de una carpeta llamada `teaching-programming` en el lugar donde tu agente descubra skills.
+Si no se está usando el CLI de `skills`, la regla portable es simple: colocar el `SKILL.md` canónico dentro de una carpeta llamada `teaching-programming` en el lugar donde el agente descubra skills.
 
 ### OpenCode
 
-Si tu instalación de OpenCode descubre skills desde carpetas estándar de proyecto o globales, este es el layout esperado:
+Si la instalación de OpenCode descubre skills desde carpetas estándar de proyecto o globales, este es el layout esperado:
 
 Proyecto local:
 
@@ -167,14 +167,14 @@ cp skills/teaching-programming/SKILL.md ~/.claude/skills/teaching-programming/SK
 
 ### Herramientas basadas en AGENTS.md
 
-Si tu herramienta no descubre `SKILL.md` automáticamente, guardá el skill en una carpeta del proyecto y referencialo desde `AGENTS.md` o desde un archivo equivalente de instrucciones.
+Si la herramienta no descubre `SKILL.md` automáticamente, conviene guardar el skill en una carpeta del proyecto y referenciarlo desde `AGENTS.md` o desde un archivo equivalente de instrucciones.
 
 ```bash
 mkdir -p .agents/skills/teaching-programming
 cp skills/teaching-programming/SKILL.md .agents/skills/teaching-programming/SKILL.md
 ```
 
-Después apuntá tu `AGENTS.md` a:
+Después, `AGENTS.md` debe apuntar a:
 
 ```text
 .agents/skills/teaching-programming/SKILL.md
@@ -182,14 +182,14 @@ Después apuntá tu `AGENTS.md` a:
 
 ### Carga directa por ruta
 
-Si tu agente soporta pasar una ruta de skill directamente, guardá el archivo en un lugar estable:
+Si el agente soporta pasar una ruta de skill directamente, conviene guardar el archivo en un lugar estable:
 
 ```bash
 mkdir -p ~/ai-skills/teaching-programming
 cp skills/teaching-programming/SKILL.md ~/ai-skills/teaching-programming/SKILL.md
 ```
 
-Después cargá:
+Después, debe cargarse:
 
 ```text
 ~/ai-skills/teaching-programming/SKILL.md
@@ -214,11 +214,11 @@ my-project/
             └── SKILL.md
 ```
 
-No necesitás tener todas las copias salvo que quieras compatibilidad amplia.
+No es necesario tener todas las copias salvo que se busque compatibilidad amplia.
 
 ## Prompt de verificación
 
-Después de instalarlo, probalo con:
+Después de instalarlo, puede probarse con:
 
 ```text
 Enseñame mientras creas una función simple que reciba una lista de números y devuelva la suma de los números pares. Detente después de crear la función, después del bucle y después del if.
@@ -238,5 +238,5 @@ Resultado esperado:
 - No ejecuta código ni instala dependencias por sí mismo.
 - Es seguro de inspeccionar porque su comportamiento está definido en Markdown plano.
 - La fuente de verdad runtime es `skills/teaching-programming/SKILL.md`.
-- El comportamiento exacto de descubrimiento depende de cada herramienta, así que verificá rutas y reglas de carga en tu agente antes de expandir su uso.
+- El comportamiento exacto de descubrimiento depende de cada herramienta, así que conviene verificar rutas y reglas de carga en el agente antes de expandir su uso.
 - El descubrimiento en skills.sh depende de instalaciones reales con el CLI de `skills` y puede tardar en aparecer porque las páginas del repositorio se cachean.
