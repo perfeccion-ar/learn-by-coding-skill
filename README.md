@@ -145,6 +145,37 @@ mkdir -p ~/.config/opencode/skills/teaching-programming
 cp skills/teaching-programming/SKILL.md ~/.config/opencode/skills/teaching-programming/SKILL.md
 ```
 
+### Pi
+
+Pi discovers skills from both Pi-specific skill folders and shared `.agents/skills` folders.
+
+Project-local Pi folder:
+
+```bash
+mkdir -p .pi/skills/teaching-programming
+cp skills/teaching-programming/SKILL.md .pi/skills/teaching-programming/SKILL.md
+```
+
+Global Pi folder:
+
+```bash
+mkdir -p ~/.pi/agent/skills/teaching-programming
+cp skills/teaching-programming/SKILL.md ~/.pi/agent/skills/teaching-programming/SKILL.md
+```
+
+Shared agent folder that Pi also loads:
+
+```bash
+mkdir -p ~/.agents/skills/teaching-programming
+cp skills/teaching-programming/SKILL.md ~/.agents/skills/teaching-programming/SKILL.md
+```
+
+After installation, Pi can load the skill on demand with:
+
+```text
+/skill:teaching-programming
+```
+
 ### Claude-style skill folders
 
 For Claude-style skill folders, this is a common layout:
@@ -198,6 +229,10 @@ Then load:
 ```text
 my-project/
 ├── AGENTS.md
+├── .pi/
+│   └── skills/
+│       └── teaching-programming/
+│           └── SKILL.md
 ├── .agents/
 │   └── skills/
 │       └── teaching-programming/

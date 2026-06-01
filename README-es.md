@@ -147,6 +147,37 @@ mkdir -p ~/.config/opencode/skills/teaching-programming
 cp skills/teaching-programming/SKILL.md ~/.config/opencode/skills/teaching-programming/SKILL.md
 ```
 
+### Pi
+
+Pi descubre skills tanto desde carpetas específicas de Pi como desde carpetas compartidas `.agents/skills`.
+
+Carpeta local del proyecto para Pi:
+
+```bash
+mkdir -p .pi/skills/teaching-programming
+cp skills/teaching-programming/SKILL.md .pi/skills/teaching-programming/SKILL.md
+```
+
+Carpeta global de Pi:
+
+```bash
+mkdir -p ~/.pi/agent/skills/teaching-programming
+cp skills/teaching-programming/SKILL.md ~/.pi/agent/skills/teaching-programming/SKILL.md
+```
+
+Carpeta compartida de agentes que Pi también carga:
+
+```bash
+mkdir -p ~/.agents/skills/teaching-programming
+cp skills/teaching-programming/SKILL.md ~/.agents/skills/teaching-programming/SKILL.md
+```
+
+Después de la instalación, Pi puede cargar el skill bajo demanda con:
+
+```text
+/skill:teaching-programming
+```
+
 ### Carpetas de skill estilo Claude
 
 Para carpetas de skill estilo Claude, este es un layout común:
@@ -200,6 +231,10 @@ Después, debe cargarse:
 ```text
 my-project/
 ├── AGENTS.md
+├── .pi/
+│   └── skills/
+│       └── teaching-programming/
+│           └── SKILL.md
 ├── .agents/
 │   └── skills/
 │       └── teaching-programming/
