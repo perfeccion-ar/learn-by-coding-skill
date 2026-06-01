@@ -20,7 +20,7 @@ Licensed under `AGPL-3.0-or-later`. See [`LICENSE`](./LICENSE).
 
 ## Quick path
 
-1. Install `SKILL.md` under a skill folder named `teaching-programming`.
+1. Install the skill with the `skills` CLI, or copy the canonical `SKILL.md` manually if needed.
 2. Ask the agent to teach while coding, for example: `Enseñame mientras agregas validación a esta función.`
 3. Verify that the agent switches to small teaching steps instead of dumping a full solution.
 
@@ -85,14 +85,18 @@ learn-by-coding-skill/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
-└── SKILL.md
+├── skills.sh.json
+└── skills/
+    └── teaching-programming/
+        └── SKILL.md
 ```
 
 Notes:
 
-- `SKILL.md` is the canonical runtime instruction file.
+- `skills/teaching-programming/SKILL.md` is the canonical runtime instruction file.
 - `README.md` explains intent, installation, and verification.
 - `CHANGELOG.md` tracks published release history.
+- `skills.sh.json` customizes how the repository page can appear on skills.sh.
 - `.atl/` is treated as local environment state and is intentionally excluded from the published repo.
 
 ## Canonical skill name
@@ -103,9 +107,23 @@ Use this exact folder name when installing the skill:
 teaching-programming
 ```
 
-## Installation
+## Install with skills CLI
 
-The portable rule is simple: place `SKILL.md` inside a folder named `teaching-programming` wherever your agent discovers skills.
+This is the most ecosystem-aligned installation path for skills.sh-compatible agents:
+
+```bash
+npx skills add https://github.com/perfeccion-ar/learn-by-coding-skill --skill teaching-programming
+```
+
+Why this path matters:
+
+- it matches the install pattern shown on skills.sh skill pages
+- it makes the repo easier to install for supported agents
+- it is the install path that contributes to skills.sh discovery and leaderboard telemetry
+
+## Manual installation
+
+If you are not using the `skills` CLI, the portable rule is simple: place the canonical `SKILL.md` inside a folder named `teaching-programming` wherever your agent discovers skills.
 
 ### OpenCode
 
@@ -115,14 +133,14 @@ Project-local:
 
 ```bash
 mkdir -p .opencode/skills/teaching-programming
-cp SKILL.md .opencode/skills/teaching-programming/SKILL.md
+cp skills/teaching-programming/SKILL.md .opencode/skills/teaching-programming/SKILL.md
 ```
 
 Global:
 
 ```bash
 mkdir -p ~/.config/opencode/skills/teaching-programming
-cp SKILL.md ~/.config/opencode/skills/teaching-programming/SKILL.md
+cp skills/teaching-programming/SKILL.md ~/.config/opencode/skills/teaching-programming/SKILL.md
 ```
 
 ### Claude-style skill folders
@@ -133,14 +151,14 @@ Project-local:
 
 ```bash
 mkdir -p .claude/skills/teaching-programming
-cp SKILL.md .claude/skills/teaching-programming/SKILL.md
+cp skills/teaching-programming/SKILL.md .claude/skills/teaching-programming/SKILL.md
 ```
 
 Global:
 
 ```bash
 mkdir -p ~/.claude/skills/teaching-programming
-cp SKILL.md ~/.claude/skills/teaching-programming/SKILL.md
+cp skills/teaching-programming/SKILL.md ~/.claude/skills/teaching-programming/SKILL.md
 ```
 
 ### AGENTS.md-based tools
@@ -149,7 +167,7 @@ If your tool does not auto-discover `SKILL.md`, keep the skill in a project fold
 
 ```bash
 mkdir -p .agents/skills/teaching-programming
-cp SKILL.md .agents/skills/teaching-programming/SKILL.md
+cp skills/teaching-programming/SKILL.md .agents/skills/teaching-programming/SKILL.md
 ```
 
 Then point your `AGENTS.md` instructions to:
@@ -164,7 +182,7 @@ If your agent supports passing a skill path directly, keep the file somewhere st
 
 ```bash
 mkdir -p ~/ai-skills/teaching-programming
-cp SKILL.md ~/ai-skills/teaching-programming/SKILL.md
+cp skills/teaching-programming/SKILL.md ~/ai-skills/teaching-programming/SKILL.md
 ```
 
 Then load:
@@ -215,5 +233,6 @@ Expected outcome:
 - This is an instruction-only skill.
 - It does not execute code or install dependencies by itself.
 - It is safe to inspect because its behavior is defined in plain Markdown.
-- The runtime source of truth is `SKILL.md`.
+- The runtime source of truth is `skills/teaching-programming/SKILL.md`.
 - Tool-specific discovery behavior can vary, so verify exact paths and loading rules in your chosen agent before wider rollout.
+- skills.sh discovery depends on real installs through the `skills` CLI and may take time to appear because repository pages are cached.

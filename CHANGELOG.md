@@ -2,6 +2,14 @@
 
 All notable changes to this skill will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- Reorganized the repository to use a `skills/teaching-programming/SKILL.md` layout for easier skills.sh-style installation.
+- Added a `skills.sh.json` repository configuration file.
+- Updated the README to document installation via `npx skills add ... --skill teaching-programming`.
+
 ## [0.1.0] - 2026-05-31
 
 ### Added
