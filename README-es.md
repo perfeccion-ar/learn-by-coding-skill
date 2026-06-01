@@ -121,12 +121,6 @@ Este es el camino más alineado con el ecosistema para agentes compatibles con s
 npx skills add https://github.com/perfeccion-ar/learn-by-coding-skill --skill teaching-programming
 ```
 
-Por qué importa este camino:
-
-- coincide con el patrón de instalación que muestran las páginas de skills.sh
-- hace que el repo sea más fácil de instalar para agentes compatibles
-- es el camino de instalación que contribuye al descubrimiento y a la telemetría del leaderboard de skills.sh
-
 ## Instalación manual
 
 Si no se está usando el CLI de `skills`, la regla portable es simple: colocar el `SKILL.md` canónico dentro de una carpeta llamada `teaching-programming` en el lugar donde el agente descubra skills.

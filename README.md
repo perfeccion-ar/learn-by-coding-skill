@@ -121,10 +121,6 @@ npx skills add https://github.com/perfeccion-ar/learn-by-coding-skill --skill te
 
 Why this path matters:
 
-- it matches the install pattern shown on skills.sh skill pages
-- it makes the repo easier to install for supported agents
-- it is the install path that contributes to skills.sh discovery and leaderboard telemetry
-
 ## Manual installation
 
 If you are not using the `skills` CLI, the portable rule is simple: place the canonical `SKILL.md` inside a folder named `teaching-programming` wherever your agent discovers skills.
