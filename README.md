@@ -44,6 +44,14 @@ It should also:
 
 ## Good trigger examples
 
+English:
+
+- `teach me`
+- `step by step`
+- `explain while coding`
+- `teaching mode`
+- `walk me through it`
+
 Spanish:
 
 - `enseñame`
@@ -53,20 +61,12 @@ Spanish:
 - `paso a paso`
 - `modo enseñanza`
 
-English:
-
-- `teach me`
-- `step by step`
-- `explain while coding`
-- `teaching mode`
-- `walk me through it`
-
 ## Expected behavior
 
 If the user says:
 
 ```text
-Enseñame mientras agregas validación a esta función.
+Teach me while you add validation to this function.
 ```
 
 the assistant should:
@@ -217,7 +217,7 @@ You do not need every copy unless you want broad compatibility.
 After installing, test with:
 
 ```text
-Enseñame mientras creas una función simple que reciba una lista de números y devuelva la suma de los números pares. Detente después de crear la función, después del bucle y después del if.
+Create and teach me in the process: I need a simple function that takes a list of numbers and returns the sum of the even numbers. Stop after creating the function, after the loop, and after the if statement.
 ```
 
 Expected outcome:
