@@ -1,5 +1,7 @@
 # Teaching Programming Skill
 
+[Read this README in Spanish](./README-es.md)
+
 `teaching-programming` is an instruction-only skill for coding sessions where the user wants to learn while the agent implements.
 
 It turns the assistant into a step-by-step programming teacher: make a small change, show the change, explain the reason, then continue.
