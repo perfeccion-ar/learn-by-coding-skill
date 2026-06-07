@@ -4,15 +4,17 @@
 
 [Leer este README en inglés](./README.md)
 
-`teaching-programming` es un skill solo de instrucciones para sesiones de programación en las que la persona quiere aprender mientras el agente implementa.
+Es un skill que instruye a la IA para que la persona entienda lo que sucede mientras el agente implementa.
 
-Convierte al asistente en un profesor paso a paso: hacer un cambio pequeño, mostrar el cambio, explicar el motivo y recién después continuar.
+Así, convierte a la IA en un profesor paso a paso: explica la razón por la cual ha hecho cambios en bloques, funciones, if, bucles, etc. Explica el motivo, como funcionan las líneas y recién después prosigue.
+
+El propósito es que el programador nunca pierda el control de la lógica del código, que no sufra de burnout cuando algo no funciona, y deba correr a pagarse más créditos al no poder enderezar lo que la anterior sesión de IA le ha modificado.
 
 ## Estado
 
 Versión actual: `1.0.1`
 
-Esta es la versión pública actual del skill. Está lista para usarse y seguir evolucionando según el uso real.
+Esta es la versión pública actual del skill. Está lista para usarse.
 
 Las notas de versiones publicadas viven en [`CHANGELOG.md`](./CHANGELOG.md).
 
@@ -24,7 +26,7 @@ Licenciado bajo `AGPL-3.0-or-later`. Ver [`LICENSE`](./LICENSE).
 
 ## Camino rápido
 
-1. Instale el skill con el CLI de `skills`, o copie manualmente el `SKILL.md` canónico si hace falta.
+1. Instale el skill con el CLI de `skills` (ver abajo), o copie manualmente el `SKILL.md` canónico si hace falta.
 2. Solicite al agente que enseñe mientras programa, por ejemplo: `Enseñame mientras agregas validación a esta función.`
 3. Verifique que el agente cambie a pasos pequeños de enseñanza en vez de volcar una solución completa de una sola vez.
 
